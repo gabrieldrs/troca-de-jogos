@@ -8,9 +8,9 @@ Baixa e instala essas 3 coisas:
 
   * [Node.js](http://nodejs.org)
   * [Grunt](http://gruntjs.com/):
-    ** Abre o cmd e digita `npm install -g grunt-cli`
+   Abre o cmd e digita `npm install -g grunt-cli`
   * [Bower](http://bower.io): 
-    ** Abre o cmd e digita `[sudo] npm install -g bower`
+   Abre o cmd e digita `[sudo] npm install -g bower`
 
 ## Baixar as últiams atualizações
 
