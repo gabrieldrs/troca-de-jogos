@@ -1,0 +1,29 @@
+{
+  "name": "TrocaDeJogos",
+  "dependencies": {
+    "fastclick": ">=0.6.11",
+    "foundation": "zurb/bower-foundation",
+    "foundation-icon-fonts": "*"
+  },
+  "version": "0.1.0",
+  "authors": [
+    "gabrieldrs"
+  ],
+  "description": "Trabalho para USP",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Jogo"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

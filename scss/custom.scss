@@ -1,0 +1,256 @@
+#header{
+    width:100%;
+    background:$topbar-bg-color;
+    nav {
+        //padding:rem-calc(0 0 0 20);
+    }
+    .top-bar{
+        .title-area {
+            line-height: $topbar-height;
+            padding:rem-calc(0 0 0 20);
+            a{
+                color:white;
+            }
+        }
+    }
+}
+@mixin custom-border-bottom($color1,$color2){
+    padding-left:5%;
+    position:relative;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color:rgba($color1,.5);
+    &:after {
+        position:absolute;
+        content:'';
+        width:rem-calc(92);
+        left:5%;
+        bottom:-1px;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color:rgba($color2,.7);
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monda', sans-serif;
+}
+h3{
+    font-size:rem-calc(16);
+    line-height:rem-calc(50); 
+}
+h4 {
+    font-size:rem-calc(15);
+    line-height:rem-calc(30); 
+}
+
+/* Alterar */
+.game-description {
+    h3 {
+        font-size:rem-calc(12) !important;
+        line-height: rem-calc(30);
+        margin-bottom: rem-calc(5);
+    }
+    p,h3{
+        font-size:rem-calc(12);
+        text-align:left;
+        line-height: rem-calc(20);
+        margin-bottom:0;
+        &.title{
+            line-height: rem-calc(30);
+            margin-bottom: rem-calc(5);
+        }
+    }
+}
+
+#all-wrapper{
+    background-image:url('../img/all-wrapper-bg.png');
+    background-size: contain;
+}
+.left-menu{
+    .user-space{
+        padding:rem-calc(10 15);
+        img {
+            margin-right:rem-calc(10);
+        }
+        header {
+            margin:rem-calc(8 0 0 0);
+            padding:0;
+            color:$menu-font-color;
+            font-weight: $font-weight-bold;
+            line-height: normal;
+        }
+        p {
+            font-family: 'Duru Sans', sans-serif;
+            font-size: rem-calc(11);
+            margin:0;
+            padding:0;
+            color:rgba($menu-font-color,.5);
+        }
+        .message-counter {
+            background: #969778;
+            line-height: 1rem;
+            border-radius: $global-radius;
+            padding:rem-calc(1 3);
+            margin-top:4%;
+            color:white;
+            box-shadow:inset -1px 1px 1px rgba(white, .5);
+            
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding:0;
+        margin:0;
+        background:$secondary-color;
+        color:lighten($body-font-color,20%);
+        li{
+            font-family: 'Duru Sans', sans-serif;
+            font-weight:$font-weight-bold;
+            font-size:rem-calc(11);
+            line-height: rem-calc(50);
+            padding:rem-calc(0 20 0 65);
+            border-top: 1px solid lighten($secondary-color,10%);
+            border-bottom: 1px solid darken($secondary-color,10%);
+            &:last-child {
+                border-bottom:none;
+            }
+            &.active {
+                color:$menu-font-color;
+            }
+            i{
+                font-size: rem-calc(16);
+                margin-right:rem-calc(20);
+                
+            }
+        }
+    }
+    .light {
+        background:url('../img/pattern.png') #8d9597;
+        h3 {
+            @include custom-border-bottom(#b5babd,white);
+        }
+    }
+    .dark {
+        background:$secondary-color;
+        h3{
+            @include custom-border-bottom(lighten($secondary-color,10%),white);
+        }
+    }
+    .light, .dark{
+        padding-bottom:rem-calc(20); 
+        h3 {
+            margin-bottom:rem-calc(20);
+            color:$menu-font-color;
+        }
+        p{
+            font-size:rem-calc(11);
+            font-family: 'Duru Sans', sans-serif;
+        }
+        p, h3 {
+            color:$menu-font-color;
+        }
+    }
+}
+
+#content{
+    padding-bottom: rem-calc(20);
+    background:white;
+    .orbit-slide-number{
+        display:none;
+    }
+    h3 {
+        @include custom-border-bottom(lighten($secondary-color,10%),black);
+    }
+    article h3 {
+        font-size: rem-calc(20);
+    }
+    #partner-wrapper{
+        overflow: hidden;
+        position: relative;
+        h3{
+            @include custom-border-bottom(lighten($secondary-color,10%),black);
+            text-align: left;
+        }
+        #partner{
+            display: block;
+            padding:rem-calc(5px 30px);
+            #inner-partner {
+                transition: margin-left 300ms ease;
+                a img {
+                    @media #{$small-only} {width:rem-calc(64)}
+                    @media #{$medium-only} {width:rem-calc(96)}
+                }
+            }
+        }
+        .arrow {
+            position: absolute;
+            top:50%;
+            height:rem-calc(60px);
+            width:rem-calc(30px);
+            text-align: center;
+            background: rgba(black,.2);
+            &:hover{
+                background: rgba(black,.5);
+            }
+            span{
+                position: absolute;
+                top: 50%;
+                margin-top: rem-calc(-10px);
+                display: block;
+                width: 0px;
+                height: 0px;
+                border: 10px inset;
+            }
+        }
+        .left-arrow {
+            left:0;
+            span{
+                border-right-style: solid;
+                border-color: transparent #FFF transparent transparent;
+            }
+        }
+        .right-arrow {
+            right:0;
+            span{
+                left:50%;
+                margin-left:rem-calc(-5px);
+                border-left-style: solid;
+                border-color: transparent transparent transparent #FFF;
+            }
+        }
+    }
+    #content-menu {
+        border-left: 1px solid rgba(lighten($secondary-color,10%),.2);
+        .accordion dd a {
+            font-size:rem-calc(16);
+            line-height:rem-calc(15);
+            border-bottom-color:rgba(lighten($secondary-color,10%),.2);
+            text-align: left;
+            &:after {
+                border-bottom-color:rgba(black,.7);
+                
+            }
+        } 
+        h3 {
+            @include custom-border-bottom(lighten($secondary-color,10%),black);
+            white-space: nowrap;
+            text-overflow:ellipsis;
+        }
+        .recomendation {
+            font-size: rem-calc(12);
+        }
+    }
+}
+footer {
+    background:url('../img/pattern.png') #8d9597;
+    h3 {
+        @include custom-border-bottom(#b5babd,white);
+    }
+    p {
+        font-size:rem-calc(12);
+    }
+    p, h3 {
+        color:$menu-font-color;
+        padding-left:5%;
+    }
+}
