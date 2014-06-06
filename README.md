@@ -23,7 +23,7 @@ Enquanto trabalha no projeto rode:
 
 `grunt`
 
-E ele irá compilar os scss!
+E ele irá compilar os scss.
 
 ## Directory Structure
 
