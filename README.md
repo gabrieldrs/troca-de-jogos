@@ -12,21 +12,20 @@ Baixa e instala essas 3 coisas:
   * [Bower](http://bower.io): 
    Abre o cmd e digita `[sudo] npm install -g bower`
 
-## Baixar as últimas atualizações
+## Baixar as últiams atualizações
 
 ```bash
-git clone git@github.com:gabrieldrs/troca-de-jogos.git
+git clone git@github.com:zurb/foundation-libsass-template.git
 npm install && bower install
 ```
 
-Enquanto trabalha no projeto rode:
+While you're working on your project, run:
 
 `grunt`
 
-E ele irá compilar os scss!
+And you're set!
 
 ## Directory Structure
 
-  * `scss/_settings.scss`: Configurações do foundation
-  * `scss/app.scss`: Configurações dos módulos do foundation
-  * `scss/custom.scss`: Configurações particulares
+  * `scss/_settings.scss`: Foundation configuration settings go in here
+  * `scss/app.scss`: Application styles go here
