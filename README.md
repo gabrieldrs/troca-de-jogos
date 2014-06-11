@@ -1,29 +1,32 @@
-# Foundation libsass template
+# Troca de jogos (FSI)
 
-This is a template to start your own project that uses Grunt and libsass!
+Todas as alterações serão publicadas aqui
 
-## Requirements
+## Como usar sabagaça
 
-You'll need to have the following items installed before continuing.
+Baixa e instala essas 3 coisas:
 
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
-  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
+  * [Node.js](http://nodejs.org)
+  * [Grunt](http://gruntjs.com/):
+   Abre o cmd e digita `npm install -g grunt-cli`
+  * [Bower](http://bower.io): 
+   Abre o cmd e digita `[sudo] npm install -g bower`
 
-## Quickstart
+## Baixar as últimas atualizações
 
 ```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
+git clone git@github.com:gabrieldrs/troca-de-jogos.git
 npm install && bower install
 ```
 
-While you're working on your project, run:
+Enquanto trabalha no projeto rode:
 
 `grunt`
 
-And you're set!
+E ele irá compilar os scss.
 
 ## Directory Structure
 
-  * `scss/_settings.scss`: Foundation configuration settings go in here
-  * `scss/app.scss`: Application styles go here
+  * `scss/_settings.scss`: Configurações do foundation
+  * `scss/app.scss`: Configurações dos módulos do foundation
+  * `scss/custom.scss`: Configurações particulares
