@@ -1,20 +1,5 @@
-#header{
-    width:100%;
-    background:$topbar-bg-color;
-    nav {
-        //padding:rem-calc(0 0 0 20);
-    }
-    .top-bar{
-        .title-area {
-            line-height: $topbar-height;
-            padding:rem-calc(0 0 0 20);
-            a{
-                color:white;
-            }
-        }
-    }
-}
-@mixin custom-border-bottom($color1,$color2){
+//MIXINS
+@mixin custom-border-bottom($color1,$color2){ 
     padding-left:5%;
     position:relative;
     border-bottom-width: 1px;
@@ -31,6 +16,21 @@
         border-bottom-color:rgba($color2,.7);
     }
 }
+
+//SCSS
+#header{
+    width:100%;
+    background:$topbar-bg-color;
+    .top-bar{
+        .title-area {
+            line-height: $topbar-height;
+            padding-left:rem-calc(20);
+            a{
+                color:white;
+            }
+        }
+    }
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Monda', sans-serif;
 }
@@ -39,31 +39,26 @@ h3{
     line-height:rem-calc(50); 
 }
 h4 {
-    font-size:rem-calc(15);
+    font-size:rem-calc(16);
     line-height:rem-calc(30); 
 }
-
-/* Alterar */
-.game-description {
+p {
+    font-size:rem-calc(14);
+}
+div[data-dropdown-content] {
     h3 {
-        font-size:rem-calc(12) !important;
-        line-height: rem-calc(30);
-        margin-bottom: rem-calc(5);
+        @include custom-border-bottom(lighten($secondary-color,10%),black);
     }
     p,h3{
         font-size:rem-calc(12);
         text-align:left;
         line-height: rem-calc(20);
         margin-bottom:0;
-        &.title{
-            line-height: rem-calc(30);
-            margin-bottom: rem-calc(5);
-        }
     }
 }
-
 #all-wrapper{
     background-image:url('../img/all-wrapper-bg.png');
+    @media #{$medium-only} { background-image:url('../img/all-wrapper-bg-medium.png');}
     background-size: contain;
 }
 .left-menu{
@@ -73,7 +68,7 @@ h4 {
             margin-right:rem-calc(10);
         }
         header {
-            margin:rem-calc(8 0 0 0);
+            margin-top:rem-calc(8);
             padding:0;
             color:$menu-font-color;
             font-weight: $font-weight-bold;
@@ -159,7 +154,7 @@ h4 {
         display:none;
     }
     h3 {
-        @include custom-border-bottom(lighten($secondary-color,10%),black);
+        @include custom-border-bottom(lighten($secondary-color,10%),black); 
     }
     article h3 {
         font-size: rem-calc(20);
@@ -221,23 +216,15 @@ h4 {
     }
     #content-menu {
         border-left: 1px solid rgba(lighten($secondary-color,10%),.2);
-        .accordion dd a {
+        .accordion dd>a {
+            @include custom-border-bottom(lighten($secondary-color,10%),black);
             font-size:rem-calc(16);
             line-height:rem-calc(15);
             border-bottom-color:rgba(lighten($secondary-color,10%),.2);
             text-align: left;
-            &:after {
-                border-bottom-color:rgba(black,.7);
-                
-            }
-        } 
-        h3 {
-            @include custom-border-bottom(lighten($secondary-color,10%),black);
-            white-space: nowrap;
-            text-overflow:ellipsis;
         }
-        .recomendation {
-            font-size: rem-calc(12);
+        .recommendation {
+            font-size: rem-calc(11);
         }
     }
 }
